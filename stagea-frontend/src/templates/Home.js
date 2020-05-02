@@ -1,10 +1,48 @@
 import React from 'react';
 import '../styles/css/home.css';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-export default function Home(){
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        flexGrow: 1,
+    },
+}));
+
+export default function Home() {
+    const classes = useStyles();
+
     return(
-        <div className="r_main">
-            <p>Hello World!</p>
-        </div>
+        <AppBar position="static">
+            <Toolbar>
+                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" className={classes.title}>
+                    Use cases
+                </Typography>
+                <Typography variant="h6" className={classes.title}>
+                    How it works
+                </Typography>
+                <Typography variant="h6" className={classes.title}>
+                    Pricing
+                </Typography>
+                <Typography variant="h6" className={classes.title}>
+                    Sign in
+                </Typography>
+                <Button color="inherit">Try for free</Button>
+            </Toolbar>
+        </AppBar>
     );
 }
