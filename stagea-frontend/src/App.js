@@ -5,7 +5,7 @@ import "./static/styles/css/clear_fix.css";
 function App() {
   return [
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@450;500;600;700&display=swap"
       rel="stylesheet"
     ></link>,
     <Routes />,
