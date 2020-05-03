@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Box, Typography } from "@material-ui/core";
 import Rooms from "components/Rooms";
 import NetworkingDrawer from "components/NetworkingDrawer";
-import "../static/styles/css/platform.css";
+import "../../static/styles/css/platform.css";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
