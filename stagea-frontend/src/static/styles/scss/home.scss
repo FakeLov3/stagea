@@ -30,6 +30,9 @@ $stage_blue: #506cf0;
   width: 100%;
   h1 {
     width: 28%;
+    >div {
+        margin: 0!important;
+    }
   }
   &__sub,
   &__login {

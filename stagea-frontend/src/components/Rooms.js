@@ -33,9 +33,9 @@ export default function Rooms() {
 
     return (
         <div className="rooms">
-            <h1 className="logo">
+            <a href="/" className="logo">
                 <img src={stagea}/>
-            </h1>
+            </a>
             <div className="profile">
                 <img src={Avatar}/>
                 <span>
