@@ -68,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   tab__selected: {
+    // TODO: implement brackets exhibition on selected
     color: "#506CF0",
   },
   chatContainer: {

@@ -70,6 +70,7 @@ const roomsData = [
   },
 ];
 
+// TODO: change selected room based on current path
 export default function Rooms() {
   const classes = useStyles();
 
