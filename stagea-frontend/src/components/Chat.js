@@ -24,12 +24,12 @@ import {
 } from "storage/chat";
 
 function TabPanel(props) {
-  const { children, value, index } = props;
+  const { children, value, index, ...other } = props;
 
   return (
-    <div role="tabpanel" hidden={value !== index}>
+    <div role="tabpanel" hidden={value !== index} {...other}>
       {value === index && (
-        <Box p={3}>
+        <Box p={2}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -43,16 +43,45 @@ const useStyles = makeStyles((theme) => ({
   },
   tabRoot: {
     flexGrow: 1,
+    minWidth: "50px",
+    textTransform: "none",
+  },
+  paperRoot: {
+    marginTop: "45px",
+    marginLeft: "12px",
+    width: "247px",
+    height: "391px",
+  },
+  tabs: {
+    backgroundColor: "#F5F5FB",
+  },
+  tabPanel: {
+    backgroundColor: "#F2F2F2",
+    position: "relative",
+    height: "86%",
+  },
+  chatContainer: {
+    overflow: "auto",
+    height: "281px",
+  },
+  chatMessage: {
+    padding: 0,
+    overflowWrap: "break-word",
+  },
+  form: {
+    position: "absolute",
+    bottom: 0,
   },
 }));
 
 function GeneralChat() {
+  const classes = useStyles();
   const [message, setMessage] = useState("");
   const [author, setAuthor] = useState("");
 
   const ChatMessage = ({ author, message }) => {
     return (
-      <ListItem alignItems="flex-start">
+      <ListItem alignItems="flex-start" className={classes.chatMessage}>
         <ListItemAvatar>
           <Avatar alt="You" src={avatar_1} />
         </ListItemAvatar>
@@ -71,7 +100,11 @@ function GeneralChat() {
   };
 
   const ChatContainer = ({ children }) => {
-    return <List id="chat-container">{children}</List>;
+    return (
+      <List className={classes.chatContainer} id="chat-container">
+        {children}
+      </List>
+    );
   };
 
   const pushMessage = ({ author, message }) => {
@@ -103,7 +136,7 @@ function GeneralChat() {
       <ChatContainer>
         <ChatMessageList />
       </ChatContainer>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={classes.form}>
         <TextField
           id="chat-message"
           label="Type your message..."
@@ -127,19 +160,23 @@ export default function Chat() {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
-    console.log(newValue);
     setValue(newValue);
   };
 
   return (
-    <Paper className={classes.tabRoot}>
-      <Tabs value={value} onChange={handleChange}>
-        <Tab label="Chat" id="tab-0" />
-        <Tab label="Groups" id="tab-1" />
+    <Paper className={classes.paperRoot}>
+      <Tabs
+        className={classes.tabs}
+        value={value}
+        onChange={handleChange}
+        variant="fullWidth"
+      >
+        <Tab label="Chat" id="tab-0" className={classes.tabRoot} />
+        <Tab label="Groups" id="tab-1" className={classes.tabRoot} />
       </Tabs>
 
       {/*Chat content*/}
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={0} className={classes.tabPanel}>
         <GeneralChat />
       </TabPanel>
 
