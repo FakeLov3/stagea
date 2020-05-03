@@ -1,11 +1,11 @@
-@import './scss_modules/rooms';
-@import './scss_modules/vmaps';
-@import './scss_modules/schedule';
+@import "./scss_modules/rooms";
+@import "./scss_modules/vmaps";
+@import "./scss_modules/schedule";
 
 .platform {
-    align-items: flex-start;
-    background: #F5F5FB;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  align-items: flex-start;
+  background: #f5f5fb;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }

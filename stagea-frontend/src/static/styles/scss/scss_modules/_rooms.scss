@@ -1,118 +1,120 @@
-$base_gray: #868E96;
-$stagea_blue: #506CF0;
+$base_gray: #868e96;
+$stagea_blue: #506cf0;
 
 .rooms {
-    background: white;
-    padding: 8vh 2vw 0;
-    width: 18%;
-    .logo {
-        img {
-            height: auto;
-            width: 8vw;
-        }
+  background: white;
+  padding: 8vh 2vw 0;
+  width: 18%;
+  .logo {
+    img {
+      height: auto;
+      width: 8vw;
     }
-    .profile {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 4vh 0;
-        width: 100%;
-        img {
-            height: auto;
-            width: 22%;
-        }
-        >span {
-            margin-left: 10%;
-            .wlcm {
-                color: $stagea_blue;
-                display: block;
-            }
-            span {
-                color: $base_gray;
-                font-size: 0.9em;
-            }
-        }
+  }
+  .profile {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4vh 0;
+    width: 100%;
+    img {
+      height: auto;
+      width: 22%;
     }
-    &__room {
-        >span {
-            display: block;
-            font-size: 1em;
-            font-weight: bold;
-            margin: 2vh 0;
-        }
-        li {
-            align-items: center;
-            border: 0.8px solid rgba(203, 203, 203, 0.6);
-            box-sizing: border-box;
-            border-radius: 12px;
-            cursor: pointer;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 3vh;
-            padding: 10%;
-            position: relative;
-            width: 100%;
-            img {
-                height: auto;
-                width: 17.5%;
-            }
-            > span {
-                margin-left: 16%;
-                span {
-                    color: $base_gray;
-                    font-size: 0.8em;
-                    font-weight: 450;
-                    position: relative;
-                    pointer-events: none;
-                    &:before {
-                        background-image:url('../../svgs/user1.svg');
-                        background-size: cover;
-                        content: "";
-                        display: inline-block;
-                        height: 13px;
-                        width: 13px;
-                    }                    
-                }
-            }
-            strong {
-                display: block;
-                font-size: 1em;
-                font-weight: 700;
-                margin-bottom: 10px;
-                pointer-events: none;
-            }
-            &:nth-child(1) {
-                border: 1.5px solid #506CF0;
-                >span span:before {
-                    background-image:url('../../svgs/user.svg');
-                }
-            }
-            &:nth-child(4):before {
-                background: #FF384E;
-                border-radius: 50%;
-                content: "";
-                display: block;
-                height: 2vw;
-                position: absolute;
-                right: -1vw;
-                top: -1vw;
-                width: 2vw;
-            }
-            &:nth-child(5), &:nth-child(6), &:nth-child(7){
-                cursor: auto;
-                &:before{
-                    background-image:url('../../svgs/lock.svg');
-                    background-size: cover;
-                    content: "";
-                    display: block;
-                    height: 2vw;
-                    position: absolute;
-                    width: 2vw;
-                    right: -1vw;
-                }
-            }
-        }
+    > span {
+      margin-left: 10%;
+      .wlcm {
+        color: $stagea_blue;
+        display: block;
+      }
+      span {
+        color: $base_gray;
+        font-size: 0.9em;
+      }
     }
+  }
+  &__room {
+    > span {
+      display: block;
+      font-size: 1em;
+      font-weight: bold;
+      margin: 2vh 0;
+    }
+    li {
+      align-items: center;
+      border: 0.8px solid rgba(203, 203, 203, 0.6);
+      box-sizing: border-box;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3vh;
+      padding: 10%;
+      position: relative;
+      width: 100%;
+      img {
+        height: auto;
+        width: 17.5%;
+      }
+      > span {
+        margin-left: 16%;
+        span {
+          color: $base_gray;
+          font-size: 0.8em;
+          font-weight: 450;
+          position: relative;
+          pointer-events: none;
+          &:before {
+            background-image: url("../../svgs/user1.svg");
+            background-size: cover;
+            content: "";
+            display: inline-block;
+            height: 13px;
+            width: 13px;
+          }
+        }
+      }
+      strong {
+        display: block;
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        pointer-events: none;
+      }
+      &:nth-child(1) {
+        border: 1.5px solid #506cf0;
+        > span span:before {
+          background-image: url("../../svgs/user.svg");
+        }
+      }
+      &:nth-child(4):before {
+        background: #ff384e;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 2vw;
+        position: absolute;
+        right: -1vw;
+        top: -1vw;
+        width: 2vw;
+      }
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        cursor: auto;
+        &:before {
+          background-image: url("../../svgs/lock.svg");
+          background-size: cover;
+          content: "";
+          display: block;
+          height: 2vw;
+          position: absolute;
+          width: 2vw;
+          right: -1vw;
+        }
+      }
+    }
+  }
 }

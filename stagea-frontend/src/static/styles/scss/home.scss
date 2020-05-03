@@ -17,8 +17,8 @@ $stage_blue: #506cf0;
 }
 
 .wrapper {
-    height: 100%;
-    padding: 8vh 8vw;
+  height: 100%;
+  padding: 8vh 8vw;
 }
 
 .menu {
@@ -30,8 +30,8 @@ $stage_blue: #506cf0;
   width: 100%;
   h1 {
     width: 28%;
-    >div {
-        margin: 0!important;
+    > div {
+      margin: 0 !important;
     }
   }
   &__sub,
