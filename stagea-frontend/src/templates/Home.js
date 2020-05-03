@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from '../components/Menu';
 import NextLVL from '../static/svgs/nextlvl.svg';
-import '../styles/css/home.css';
+import '../static/styles/css/home.css';
 
 export default function Home() {
     return(
