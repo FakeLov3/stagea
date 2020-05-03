@@ -1,48 +1,25 @@
 import React from 'react';
+import Menu from './subtemplates/Menu';
+import NextLVL from '../images/nextlvl.svg';
 import '../styles/css/home.css';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-    },
-}));
 
 export default function Home() {
-    const classes = useStyles();
 
     return(
-        <AppBar position="static">
-            <Toolbar>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon />
-                </IconButton>
-                <Typography variant="h6" className={classes.title}>
-                    Use cases
-                </Typography>
-                <Typography variant="h6" className={classes.title}>
-                    How it works
-                </Typography>
-                <Typography variant="h6" className={classes.title}>
-                    Pricing
-                </Typography>
-                <Typography variant="h6" className={classes.title}>
-                    Sign in
-                </Typography>
-                <Button color="inherit">Try for free</Button>
-            </Toolbar>
-        </AppBar>
+      [
+          <Menu/>,
+          <div className="home">
+              <div className="home__animation">
+                  <img alt="the next level event platform" src={NextLVL}/>
+              </div>
+              <div className="home__content">
+                  <p>Your online event platform that combines the experience of the<br/>
+                      in-person event with the advantages of the virtual.</p>
+              </div>
+              <button className="b__blu__type">
+                  <span>Try for free</span>
+              </button>
+          </div>
+      ]
     );
 }

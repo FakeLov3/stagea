@@ -1,6 +1,6 @@
 import React from 'react';
 import Routes from './routes';
-import './styles/css/clear_fix.css';
+import './static/styles/css/clear_fix.css';
 
 function App() {
     return (

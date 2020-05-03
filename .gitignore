@@ -24,4 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 
-/stagea-frontend/src/styles/css
+/stagea-frontend/src/static/styles/css
