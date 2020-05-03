@@ -1,10 +1,9 @@
 import React from 'react';
-import Menu from './subtemplates/Menu';
+import Menu from '../components/Menu';
 import NextLVL from '../images/nextlvl.svg';
 import '../styles/css/home.css';
 
 export default function Home() {
-
     return(
       [
           <Menu/>,

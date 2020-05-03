@@ -1,7 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 // import Stagea from '../../images/stagea.svg';
-import AnimatedLVL from '../../images/animation/somente_logo.json';
+import AnimatedLVL from '../images/animation/somente_logo.json';
 // import '../styles/css/menu.css';
 
 export default function Menu() {
