@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     minWidth: "50px",
     textTransform: "none",
+    fontWeight: "bold",
   },
   paperRoot: {
     marginTop: "45px",
@@ -59,6 +60,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#F2F2F2",
     position: "relative",
     height: "86%",
+  },
+  tab__root: {
+    "&:hover": {
+      color: "#506CF0",
+      opacity: 1,
+    },
+  },
+  tab__selected: {
+    color: "#506CF0",
   },
   chatContainer: {
     overflow: "auto",
@@ -170,8 +180,13 @@ export default function Chat() {
         value={value}
         onChange={handleChange}
         variant="fullWidth"
+        indicatorColor="transparent"
       >
-        <Tab label="Chat" id="tab-0" className={classes.tabRoot} />
+        <Tab
+          label="Chat"
+          className={classes.tabRoot}
+          classes={{ root: classes.tab__root, selected: classes.tab__selected }}
+        />
         <Tab label="Groups" id="tab-1" className={classes.tabRoot} />
       </Tabs>
 

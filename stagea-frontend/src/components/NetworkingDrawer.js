@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Drawer } from "@material-ui/core";
 import Chat from "./Chat";
+import NetworkSuggestions from "./NetworkSuggestions";
 
 const drawerWidth = 276;
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +27,7 @@ export default function NetworkingDrawer() {
       anchor="right"
     >
       <Chat />
+      <NetworkSuggestions />
     </Drawer>
   );
 }
