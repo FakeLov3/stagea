@@ -1,104 +1,116 @@
-$base_gray: #868E96;
-$stage_blue: #506CF0;
+$base_gray: #868e96;
+$stage_blue: #506cf0;
 
 @keyframes jump {
-    0% { bottom: 0px; } 15% {bottom: -10px;} 30% { bottom: 10px; } 50% { bottom: 0px; }
+  0% {
+    bottom: 0px;
+  }
+  15% {
+    bottom: -10px;
+  }
+  30% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 0px;
+  }
 }
 
 .wrapper {
     padding: 8vh 8vw;
 }
 
-.menu {    
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    h1 {
-        width: 28%;
+.menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  h1 {
+    width: 28%;
+  }
+  &__sub,
+  &__login {
+    a {
+      color: $base_gray;
+      font-size: 1em;
+      margin-right: 4vw;
+      text-decoration: none;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      /* animation */
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size 0.3s;
+      &:hover {
+        background-size: 100% 2px;
+      }
     }
-    &__sub, &__login {
-        a {
-            color: $base_gray;
-            font-size: 1em;
-            margin-right: 4vw;
-            text-decoration: none;
-            &:last-of-type {
-                margin-right: 0;
-            }
-             /* animation */
-            background-image: linear-gradient(currentColor, currentColor);
-            background-position: 0% 100%;
-            background-repeat: no-repeat;
-            background-size: 0% 2px;
-            transition: background-size .3s;
-            &:hover{
-                background-size: 100% 2px;
-            }
-        }
-        .b__blu__type {
-            background-color: $stage_blue;
-            border-radius: 6px;
-            display: inline-block;
-            color: white;
-            font-weight: 600;
-            line-height: 6vh;
-            text-align: center;
-            transition: ease-out 300ms;
-            width: 10vw;
-            &:hover{
-                background-size: 0;
-                transform: scale(1.1);
-                transition: ease-out 300ms;
-            }
-        }
+    .b__blu__type {
+      background-color: $stage_blue;
+      border-radius: 6px;
+      display: inline-block;
+      color: white;
+      font-weight: 600;
+      line-height: 6vh;
+      text-align: center;
+      transition: ease-out 300ms;
+      width: 10vw;
+      &:hover {
+        background-size: 0;
+        transform: scale(1.1);
+        transition: ease-out 300ms;
+      }
     }
+  }
 }
 
 .home {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 75%;
-    justify-content: space-around;
-    margin-top: 5%;
-    width: 100%;
-    h1 img {
-        height: auto;
-        width: 10vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 75%;
+  justify-content: space-around;
+  margin-top: 5%;
+  width: 100%;
+  h1 img {
+    height: auto;
+    width: 10vw;
+  }
+  &__animation {
+    img {
+      display: block;
+      height: auto;
+      width: 55vw;
     }
-    &__animation {
-        img {
-            display: block;
-            height: auto;
-            width: 55vw;
-        }
+  }
+  &__content {
+    color: $base_gray;
+    font-size: 1em;
+    text-align: center;
+  }
+  .b__blu__type {
+    background-color: $stage_blue;
+    border-radius: 6px;
+    height: 10vh;
+    text-align: center;
+    width: 20vw;
+    span {
+      position: relative;
+      margin: 0 auto;
+      color: white;
+      font-size: 1.6em;
+      font-weight: 600;
     }
-    &__content {
-        color: $base_gray;
-        font-size: 1em;
-        text-align: center;
+    &:hover {
+      span {
+        animation: jump 2s infinite;
+      }
     }
-    .b__blu__type {
-        background-color: $stage_blue;
-        border-radius: 6px;
-        height: 10vh;
-        text-align: center;
-        width: 20vw;
-        span {
-            position: relative;
-            margin: 0 auto;
-            color: white;
-            font-size: 1.6em;
-            font-weight: 600;
-        }
-        &:hover{
-            span{
-                animation: jump 2s infinite;
-            }
-        }
-    }
+  }
 }
