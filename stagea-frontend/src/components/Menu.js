@@ -1,8 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-// import Stagea from '../../images/stagea.svg';
-import AnimatedLVL from '../images/animation/somente_logo.json';
-// import '../styles/css/menu.css';
+import AnimatedLVL from '../static/animation/somente_logo.json';
 
 export default function Menu() {
     const defaultOptions = {
@@ -18,7 +16,6 @@ export default function Menu() {
        <article>
            <header className="menu">
                 <h1 className="logo">
-                    {/* <img src={Stagea}/>                     */}
                      <Lottie options={defaultOptions} height={45} width={260}/>
                 </h1>
                 <div className="menu__sub">
