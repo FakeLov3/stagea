@@ -6,7 +6,7 @@ import "static/styles/css/home.css";
 export default function Home() {
     return(
         <div className="wrapper">
-            <Menu/>,
+            <Menu/>
             <div className="home">
                 <div className="home__animation">
                     <img alt="the next level event platform" src={NextLVL}/>
