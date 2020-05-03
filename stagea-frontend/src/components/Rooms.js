@@ -48,7 +48,7 @@ const roomsData = [
     name: "Connect",
     viewers: "480 attendees",
     image: Networking,
-    path: "connnect",
+    path: "connect",
   },
   {
     name: "Press",
