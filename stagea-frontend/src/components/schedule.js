@@ -1,7 +1,59 @@
 import React from "react";
+import { Chip, Typography } from "@material-ui/core";
 import speaker_photos from "./scheduleImage";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  title: {
+    margin: theme.spacing(2.5),
+    fontWeight: "bolder",
+    fontSize: "1.4rem",
+    marginLeft: "3vh",
+  },
+  chipGroup: {
+    marginLeft: "2vh",
+  },
+  purple: {
+    color: "white",
+    backgroundColor: "#7E73F9",
+    margin: theme.spacing(0.5),
+    minWidth: "80px",
+  },
+  orange: {
+    color: "white",
+    backgroundColor: "#FFA84F",
+    margin: theme.spacing(0.5),
+    minWidth: "80px",
+  },
+  typeSignalStage: {
+    backgroundColor: "#7E73F9",
+    borderRadius: "15px",
+    width: "4px",
+    display: "block",
+    height: "30px",
+    position: "absolute",
+    left: "9px",
+  },
+  typeSignalSessions: {
+    backgroundColor: "#FFA84F",
+    borderRadius: "15px",
+    width: "4px",
+    display: "block",
+    height: "30px",
+    position: "absolute",
+    left: "9px",
+  },
+}));
+
+function ScheduleTypeSignal({type}) {
+  const classes = useStyles();
+
+  return <div className={classes[`typeSignal${type}`]} />;
+}
 
 export default function Schedule() {
+  const classes = useStyles();
+
   const rooms = ["Stage", "Sessions", "Sessions", "Sessions", "Stage", "Stage"];
   const hours = [
     "05:30pm",
@@ -31,6 +83,7 @@ export default function Schedule() {
   for (const [index, value] of hours.entries()) {
     schedules.push(
       <li>
+        <ScheduleTypeSignal type={rooms[index]}/>
         <span>{rooms[index]}</span>
         <span>{value}</span>
         <span>{topics[index]}</span>
@@ -42,10 +95,10 @@ export default function Schedule() {
 
   return (
     <div className="schedule">
-      <strong>Schedule</strong>
-      <div>
-        <button className="b_purple">Stage</button>
-        <button className="b_orange">Sessions</button>
+      <Typography className={classes.title}>Schedule</Typography>
+      <div className={classes.chipGroup}>
+        <Chip label="Stage" className={classes.purple} />
+        <Chip label="Sessions" className={classes.orange} />
       </div>
       <ul>
         <li className="schedule__title">
