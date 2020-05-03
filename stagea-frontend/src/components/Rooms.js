@@ -1,7 +1,7 @@
 import React from "react";
 import { Drawer } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import stagea from "static/svgs/stagea.svg";
 import Avatar from "static/images/avatar_1.png";
 import Lobby from "../static/svgs/lobby.svg";
@@ -14,15 +14,15 @@ import Support from "../static/svgs/support.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "17%",
+    width: "18%",
   },
   paper: {
     width: "18%",
   },
   link: {
     textDecoration: "none",
-    color: "inherit"
-  }
+    color: "inherit",
+  },
 }));
 
 const roomsData = [
@@ -30,43 +30,43 @@ const roomsData = [
     name: "Lobby",
     viewers: "120 attendees",
     image: Lobby,
-    path: ""
+    path: "",
   },
   {
     name: "Stage",
     viewers: "1,2k attendees",
     image: Stage,
-    path: "stage"
+    path: "stage",
   },
   {
     name: "Sessions",
     viewers: "500 attendees",
     image: Play,
-    path: "sessions"
+    path: "sessions",
   },
   {
     name: "Connect",
     viewers: "480 attendees",
     image: Networking,
-    path: "connnect"
+    path: "connnect",
   },
   {
     name: "Press",
     viewers: "0 attendees",
     image: Marketing,
-    path: "press"
+    path: "press",
   },
   {
     name: "Sponsors",
     viewers: "0 attendees",
     image: Sponsors,
-    path: "sponsors"
+    path: "sponsors",
   },
   {
     name: "Support",
     viewers: "0 attendees",
     image: Support,
-    path: "support"
+    path: "support",
   },
 ];
 
@@ -74,16 +74,16 @@ const roomsData = [
 export default function Rooms() {
   const classes = useStyles();
 
-  const rooms = roomsData.map(({ name, viewers, image , path}) => {
+  const rooms = roomsData.map(({ name, viewers, image, path }) => {
     return (
-        <li>
-          <Link to={`/platform/${path}`} className={classes.link}>
-        <img src={image} />
-        <span>
-          <strong>{name}</strong>
-          <span>{viewers}</span>
-        </span>
-          </Link>
+      <li>
+        <Link to={`/platform/${path}`} className={classes.link}>
+          <img alt={`room-${name}`} src={image} />
+          <span>
+            <strong>{name}</strong>
+            <span>{viewers}</span>
+          </span>
+        </Link>
       </li>
     );
   });
