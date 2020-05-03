@@ -1,55 +1,99 @@
 import React from "react";
 import { Drawer } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { Link } from 'react-router-dom';
 import stagea from "static/svgs/stagea.svg";
 import Avatar from "static/images/avatar_1.png";
-import imageArr from "./roomsImage";
-import { makeStyles } from "@material-ui/core/styles";
+import Lobby from "../static/svgs/lobby.svg";
+import Stage from "../static/svgs/stage.svg";
+import Networking from "../static/svgs/networking.svg";
+import Marketing from "../static/svgs/marketing.svg";
+import Play from "../static/svgs/play.svg";
+import Sponsors from "../static/svgs/sponsors.svg";
+import Support from "../static/svgs/support.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "17%"
+    width: "17%",
   },
   paper: {
-    width: "18%"
+    width: "18%",
+  },
+  link: {
+    textDecoration: "none",
+    color: "inherit"
   }
 }));
+
+const roomsData = [
+  {
+    name: "Lobby",
+    viewers: "120 attendees",
+    image: Lobby,
+    path: ""
+  },
+  {
+    name: "Stage",
+    viewers: "1,2k attendees",
+    image: Stage,
+    path: "stage"
+  },
+  {
+    name: "Sessions",
+    viewers: "500 attendees",
+    image: Play,
+    path: "sessions"
+  },
+  {
+    name: "Connect",
+    viewers: "480 attendees",
+    image: Networking,
+    path: "connnect"
+  },
+  {
+    name: "Press",
+    viewers: "0 attendees",
+    image: Marketing,
+    path: "press"
+  },
+  {
+    name: "Sponsors",
+    viewers: "0 attendees",
+    image: Sponsors,
+    path: "sponsors"
+  },
+  {
+    name: "Support",
+    viewers: "0 attendees",
+    image: Support,
+    path: "support"
+  },
+];
 
 export default function Rooms() {
   const classes = useStyles();
 
-  const room_title = [
-    "Lobby",
-    "Stage",
-    "Sessions",
-    "Connect",
-    "Press",
-    "Sponsors",
-    "Support",
-  ];
-  const viewrs = [
-    "120 attendees",
-    "1,2k attendees",
-    "500 attendees",
-    "480 attendees",
-    "0 attendees",
-    "0 attendees",
-    "0 attendees",
-  ];
-  const rooms = [];
-  for (const [index, value] of room_title.entries()) {
-    rooms.push(
-      <li>
-        <img src={imageArr[index]} />
+  const rooms = roomsData.map(({ name, viewers, image , path}) => {
+    return (
+        <li>
+          <Link to={`/platform/${path}`} className={classes.link}>
+        <img src={image} />
         <span>
-          <strong>{value}</strong>
-          <span>{viewrs[index]}</span>
+          <strong>{name}</strong>
+          <span>{viewers}</span>
         </span>
+          </Link>
       </li>
     );
-  }
+  });
 
   return (
-    <Drawer variant="permanent" anchor="left" className={classes.root} classes={{paper: classes.paper}}>
+    <Drawer
+      variant="permanent"
+      anchor="left"
+      className={classes.root}
+      classes={{ paper: classes.paper }}
+    >
       <div className="rooms">
         <a href="/" className="logo">
           <img src={stagea} />

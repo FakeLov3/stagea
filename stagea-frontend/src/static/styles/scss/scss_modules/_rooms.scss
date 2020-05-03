@@ -42,6 +42,10 @@ $stagea_blue: #506cf0;
       margin: 2vh 0;
     }
     li {
+      text-decoration: none;
+      list-style: none;
+    }
+    li {
       align-items: center;
       border: 0.8px solid rgba(203, 203, 203, 0.6);
       box-sizing: border-box;
@@ -54,18 +58,28 @@ $stagea_blue: #506cf0;
       padding: 10%;
       position: relative;
       width: 100%;
-      img {
+      > a {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a img {
         height: auto;
         width: 17.5%;
       }
-      > span {
+      > a span {
         margin-left: 16%;
         span {
+          margin-left: 0;
           color: $base_gray;
           font-size: 0.8em;
-          font-weight: 450;
+          font-weight: 400;
           position: relative;
           pointer-events: none;
+          display: inline-block;
           &:before {
             background-image: url("../../svgs/user1.svg");
             background-size: cover;
@@ -73,10 +87,12 @@ $stagea_blue: #506cf0;
             display: inline-block;
             height: 13px;
             width: 13px;
+            vertical-align: bottom;
+            margin-right: 2px;
           }
         }
       }
-      strong {
+      a strong {
         display: block;
         font-size: 1em;
         font-weight: 700;

@@ -6,12 +6,10 @@ import "../static/styles/css/platform.css";
 
 export default function Platform() {
   return (
-    <React.Fragment>
       <div className="platform">
         <Rooms />
         <VMaps />
+        <NetworkingDrawer />
       </div>
-      <NetworkingDrawer />
-    </React.Fragment>
   );
 }

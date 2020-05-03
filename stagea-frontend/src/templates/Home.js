@@ -2,8 +2,18 @@ import React from "react";
 import Menu from "components/Menu";
 import NextLVL from "static/svgs/nextlvl.svg";
 import "static/styles/css/home.css";
+import {makeStyles} from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  button: {
+    textDecoration: "none",
+    color: "white"
+  }
+}))
 
 export default function Home() {
+  const classes = useStyles();
+
   return (
     <div className="wrapper">
       <Menu />
@@ -19,7 +29,7 @@ export default function Home() {
           </p>
         </div>
         <button className="b__blu__type">
-          <span>Try for free</span>
+          <span><a className={classes.button} href="/platform">Try for free</a></span>
         </button>
       </div>
     </div>
