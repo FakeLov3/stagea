@@ -1,10 +1,12 @@
-import React from 'react';
-import Rooms from '../components/Rooms';
+import React from "react";
+import Rooms from "components/Rooms";
+import NetworkingDrawer from "components/NetworkingDrawer";
 
 export default function Platform() {
-    return (
-        <>
-            <Rooms/>
-        </>
-    );
-};
+  return (
+    <React.Fragment>
+      <Rooms />
+      <NetworkingDrawer />
+    </React.Fragment>
+  );
+}

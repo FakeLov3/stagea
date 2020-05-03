@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import AnimatedLVL from "../static/animation/somente_logo.json";
+import AnimatedLVL from "static/animation/somente_logo.json";
 
 export default function Menu() {
   const defaultOptions = {
