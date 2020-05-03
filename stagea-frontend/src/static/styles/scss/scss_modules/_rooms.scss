@@ -1,11 +1,6 @@
 $base_gray: #868E96;
 $stagea_blue: #506CF0;
 
-
-.platform {
-    background: #E5E5E5;
-}
-
 .rooms {
     background: white;
     padding: 8vh 2vw 0;
@@ -70,6 +65,7 @@ $stagea_blue: #506CF0;
                     font-size: 0.8em;
                     font-weight: 450;
                     position: relative;
+                    pointer-events: none;
                     &:before {
                         background-image:url('../../svgs/user1.svg');
                         background-size: cover;
@@ -85,6 +81,7 @@ $stagea_blue: #506CF0;
                 font-size: 1em;
                 font-weight: 700;
                 margin-bottom: 10px;
+                pointer-events: none;
             }
             &:nth-child(1) {
                 border: 1.5px solid #506CF0;
@@ -103,15 +100,18 @@ $stagea_blue: #506CF0;
                 top: -1vw;
                 width: 2vw;
             }
-            &:nth-child(5):before, &:nth-child(6):before, &:nth-child(7):before{
-                background-image:url('../../svgs/lock.svg');
-                background-size: cover;
-                content: "";
-                display: block;
-                height: 2vw;
-                position: absolute;
-                width: 2vw;
-                right: -1vw;
+            &:nth-child(5), &:nth-child(6), &:nth-child(7){
+                cursor: auto;
+                &:before{
+                    background-image:url('../../svgs/lock.svg');
+                    background-size: cover;
+                    content: "";
+                    display: block;
+                    height: 2vw;
+                    position: absolute;
+                    width: 2vw;
+                    right: -1vw;
+                }
             }
         }
     }
