@@ -35,9 +35,15 @@ function StageFragment() {
         </Grid>
 
         <Grid content spacing={5}>
-          <Grid item direction="column">Figma PDF</Grid>
-          <Grid item direction="column">Figma Slides</Grid>
-          <Grid item direction="column">Invite me to chat</Grid>
+          <Grid item direction="column">
+            Figma PDF
+          </Grid>
+          <Grid item direction="column">
+            Figma Slides
+          </Grid>
+          <Grid item direction="column">
+            Invite me to chat
+          </Grid>
         </Grid>
       </Grid>
     </Box>

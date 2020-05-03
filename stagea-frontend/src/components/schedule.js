@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ScheduleTypeSignal({type}) {
+function ScheduleTypeSignal({ type }) {
   const classes = useStyles();
 
   return <div className={classes[`typeSignal${type}`]} />;
@@ -83,7 +83,7 @@ export default function Schedule() {
   for (const [index, value] of hours.entries()) {
     schedules.push(
       <li>
-        <ScheduleTypeSignal type={rooms[index]}/>
+        <ScheduleTypeSignal type={rooms[index]} />
         <span>{rooms[index]}</span>
         <span>{value}</span>
         <span>{topics[index]}</span>

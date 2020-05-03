@@ -6,10 +6,10 @@ import "../static/styles/css/platform.css";
 
 export default function Platform() {
   return (
-      <div className="platform">
-        <Rooms />
-        <VMaps />
-        <NetworkingDrawer />
-      </div>
+    <div className="platform">
+      <Rooms />
+      <VMaps />
+      <NetworkingDrawer />
+    </div>
   );
 }

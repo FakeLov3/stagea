@@ -2,7 +2,7 @@ import React from "react";
 import { ReactComponent as Vmap } from "static/svgs/map.svg";
 import PeqGNC from "static/svgs/peqgnc.svg";
 import Schedule from "../components/schedule";
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "450",
     lineHeight: "1.6em",
     margin: "0 4vh",
-  }
-}))
+  },
+}));
 
 export default function VMaps() {
   const classes = useStyles();

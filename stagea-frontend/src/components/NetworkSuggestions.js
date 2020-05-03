@@ -11,9 +11,9 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import perfil1 from 'static/images/perfil1.png';
-import perfil3 from 'static/images/perfil3.png';
-import perfil4 from 'static/images/perfil4.png';
+import perfil1 from "static/images/perfil1.png";
+import perfil3 from "static/images/perfil3.png";
+import perfil4 from "static/images/perfil4.png";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
