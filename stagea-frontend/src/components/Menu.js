@@ -25,7 +25,7 @@ export default function Menu() {
                 </div>
                 <div className="menu__login">
                     <a href="#oi">Sign in</a>
-                    <a className="b__blu__type" href="#oi">Try for free</a>
+                    <a className="b__blu__type" href="/platform">Try for free</a>
                 </div>
            </header>
         </article>
