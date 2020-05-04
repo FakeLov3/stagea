@@ -4,6 +4,7 @@ import {
   Card,
   CardMedia,
   CardContent,
+  CardActionArea,
   Grid,
   Typography,
 } from "@material-ui/core";
@@ -16,17 +17,17 @@ import introvertImage from "static/images/connect/introvert.png";
 import justChatImage from "static/images/connect/just_chat.png";
 import uxuiImage from "static/images/connect/uxui.png";
 import yogaImage from "static/images/connect/yoga.png";
-import businessImage from 'static/images/connect/business.png'
+import businessImage from "static/images/connect/business.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#f5f5fb"
+    backgroundColor: "#f5f5fb",
   },
   container: {
     flexBasis: 0,
     flexGrow: 1,
     margin: theme.spacing(7),
-    backgroundColor: "#f5f5fb"
+    backgroundColor: "#f5f5fb",
   },
   titleContainer: {
     marginBottom: "60px",
@@ -74,145 +75,165 @@ function ConnectFragment() {
       <Grid container spacing={7}>
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={karaokeImage}
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography variant="body2">
-                <strong>Karaoke Lounge</strong>
-              </Typography>
-              <Typography variant="body2">
-                <strong>Brought to you by:</strong> JAM
-              </Typography>
-              <Typography variant="body2">
-                <strong>Attendees:</strong> 200/200
-              </Typography>
-              <Box>
-                <Box className={classes.attendeesProgress} />
-                <Typography className={classes.attendeesTime} variant="body2">
-                  5 min left
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={karaokeImage}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography variant="body2">
+                  <strong>Karaoke Lounge</strong>
                 </Typography>
-              </Box>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={4}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={introvertImage}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                <strong>For introverts only</strong>
-              </Typography>
-              <Typography variant="body2">
-                Rooms that randomly put together 4 introverts. Don't know how to start conversations? That's ok, nobody here does. Just be yourself.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item xs={4}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={yogaImage}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                <strong>Yoga Class</strong>
-              </Typography>
-              <Typography variant="body2">
-                <strong>Brought to you by:</strong> ROUND
-              </Typography>
-              <Typography variant="body2">
-                <strong>Attendees:</strong> 0/100
-              </Typography>
-              <Box>
-                <Box className={classes.attendeesProgressDisabled} />
-                <Typography className={classes.attendeesTime} variant="body2">
-                  Starts in 10 min
+                <Typography variant="body2">
+                  <strong>Brought to you by:</strong> JAM
                 </Typography>
-              </Box>
-            </CardContent>
+                <Typography variant="body2">
+                  <strong>Attendees:</strong> 200/200
+                </Typography>
+                <Box>
+                  <Box className={classes.attendeesProgress} />
+                  <Typography className={classes.attendeesTime} variant="body2">
+                    5 min left
+                  </Typography>
+                </Box>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
 
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={uxuiImage}
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography variant="body2">
-                <strong>UX/UI</strong>
-              </Typography>
-              <Typography variant="body2">
-                Rooms that randomly put together 4 people interested in UX/UI Design. Interested? Enter now!
-              </Typography>
-            </CardContent>
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={introvertImage}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  <strong>For introverts only</strong>
+                </Typography>
+                <Typography variant="body2">
+                  Rooms that randomly put together 4 introverts. Don't know how
+                  to start conversations? That's ok, nobody here does. Just be
+                  yourself.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
 
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={devImage}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                <strong>Devs</strong>
-              </Typography>
-              <Typography variant="body2">
-                Rooms that randomly put together 4 people interested in programming. Join now!
-              </Typography>
-            </CardContent>
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={yogaImage}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  <strong>Yoga Class</strong>
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Brought to you by:</strong> ROUND
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Attendees:</strong> 0/100
+                </Typography>
+                <Box>
+                  <Box className={classes.attendeesProgressDisabled} />
+                  <Typography className={classes.attendeesTime} variant="body2">
+                    Starts in 10 min
+                  </Typography>
+                </Box>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
 
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={businessImage}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                <strong>Business black</strong>
-              </Typography>
-              <Typography variant="body2">
-                Now, if you are interested in business, that's the room for you. Come on in and share your knowledge with other!
-              </Typography>
-            </CardContent>
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={uxuiImage}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography variant="body2">
+                  <strong>UX/UI</strong>
+                </Typography>
+                <Typography variant="body2">
+                  Rooms that randomly put together 4 people interested in UX/UI
+                  Design. Interested? Enter now!
+                </Typography>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
 
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={justChatImage}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                <strong>Just chat</strong>
-              </Typography>
-              <Typography variant="body2">
-                Just want to chat about random things? We've got you covered, too! Join others now!
-              </Typography>
-            </CardContent>
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={devImage}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  <strong>Devs</strong>
+                </Typography>
+                <Typography variant="body2">
+                  Rooms that randomly put together 4 people interested in
+                  programming. Join now!
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        <Grid item xs={4}>
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={businessImage}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  <strong>Business black</strong>
+                </Typography>
+                <Typography variant="body2">
+                  Now, if you are interested in business, that's the room for
+                  you. Come on in and share your knowledge with other!
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        <Grid item xs={4}>
+          <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={justChatImage}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  <strong>Just chat</strong>
+                </Typography>
+                <Typography variant="body2">
+                  Just want to chat about random things? We've got you covered,
+                  too! Join others now!
+                </Typography>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
       </Grid>

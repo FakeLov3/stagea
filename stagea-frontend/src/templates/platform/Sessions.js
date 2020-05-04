@@ -4,6 +4,7 @@ import {
   Card,
   CardMedia,
   CardContent,
+  CardActionArea,
   Grid,
   Typography,
 } from "@material-ui/core";
@@ -16,14 +17,14 @@ import sessionsFirebaseImage from "static/images/sessions/firebase.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#f5f5fb"
+    backgroundColor: "#f5f5fb",
   },
   container: {
     flexBasis: 0,
     flexGrow: 1,
     margin: theme.spacing(7),
     backgroundColor: "#f5f5fb",
-    height: "100%"
+    height: "100%",
   },
   titleContainer: {
     marginBottom: "60px",
@@ -56,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-block",
     marginLeft: "10px",
     fontSize: "0.7em",
-    color: "#979797"
-  }
+    color: "#979797",
+  },
 }));
 
 function SessionsFragment() {
@@ -71,82 +72,88 @@ function SessionsFragment() {
       <Grid container spacing={6}>
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={sessionsUIImage}
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography variant="body2">
-                <strong>Improve your UI skills</strong>
-              </Typography>
-              <Typography variant="body2">
-                <strong>Speaker:</strong> Gabriela Lima
-              </Typography>
-              <Typography variant="body2">
-                <strong>Attendees:</strong> 150/150
-              </Typography>
-              <Box>
-                <Box className={classes.attendeesProgress} />
-                <Typography className={classes.attendeesTime} variant="body2">
-                  5 min left
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={sessionsUIImage}
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography variant="body2">
+                  <strong>Improve your UI skills</strong>
                 </Typography>
-              </Box>
-            </CardContent>
+                <Typography variant="body2">
+                  <strong>Speaker:</strong> Gabriela Lima
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Attendees:</strong> 150/150
+                </Typography>
+                <Box>
+                  <Box className={classes.attendeesProgress} />
+                  <Typography className={classes.attendeesTime} variant="body2">
+                    5 min left
+                  </Typography>
+                </Box>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
 
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={sessionsFirebaseImage}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                <strong>Using Firebase with Ionic</strong>
-              </Typography>
-              <Typography variant="body2">
-                <strong>Speaker:</strong> Diego Buzanello
-              </Typography>
-              <Typography variant="body2">
-                <strong>Attendees:</strong> 150/150
-              </Typography>
-              <Box>
-                <Box className={classes.attendeesProgress} />
-                <Typography className={classes.attendeesTime} variant="body2">
-                  5 min left
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={sessionsFirebaseImage}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  <strong>Using Firebase with Ionic</strong>
                 </Typography>
-              </Box>
-            </CardContent>
+                <Typography variant="body2">
+                  <strong>Speaker:</strong> Diego Buzanello
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Attendees:</strong> 150/150
+                </Typography>
+                <Box>
+                  <Box className={classes.attendeesProgress} />
+                  <Typography className={classes.attendeesTime} variant="body2">
+                    5 min left
+                  </Typography>
+                </Box>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
 
         <Grid item xs={4}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              component="img"
-              src={sessionsUXImage}
-            />
-            <CardContent>
-              <Typography variant="body2">
-                <strong>UX is the new black</strong>
-              </Typography>
-              <Typography variant="body2">
-                <strong>Speaker:</strong> Mauro Cortella
-              </Typography>
-              <Typography variant="body2">
-                <strong>Attendees:</strong> 0/150
-              </Typography>
-              <Box>
-                <Box className={classes.attendeesProgressDisabled} />
-                <Typography className={classes.attendeesTime} variant="body2">
-                  5 min left
+            <CardActionArea>
+              <CardMedia
+                className={classes.cardMedia}
+                component="img"
+                src={sessionsUXImage}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  <strong>UX is the new black</strong>
                 </Typography>
-              </Box>
-            </CardContent>
+                <Typography variant="body2">
+                  <strong>Speaker:</strong> Mauro Cortella
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Attendees:</strong> 0/150
+                </Typography>
+                <Box>
+                  <Box className={classes.attendeesProgressDisabled} />
+                  <Typography className={classes.attendeesTime} variant="body2">
+                    5 min left
+                  </Typography>
+                </Box>
+              </CardContent>
+            </CardActionArea>
           </Card>
         </Grid>
       </Grid>
