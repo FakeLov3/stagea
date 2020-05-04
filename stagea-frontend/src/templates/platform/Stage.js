@@ -1,58 +1,129 @@
 import React from "react";
-import { Grid, Box, Typography } from "@material-ui/core";
-import Rooms from "components/Rooms";
-import NetworkingDrawer from "components/NetworkingDrawer";
-import "../../static/styles/css/platform.css";
+import {
+  Box,
+  Card,
+  CardMedia,
+  CardContent,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import Rooms from "../../components/Rooms";
+import NetworkingDrawer from "../../components/NetworkingDrawer";
 import { makeStyles } from "@material-ui/core/styles";
+import speakerVideoImage from 'static/images/stage/speaker_video.png';
 
 const useStyles = makeStyles((theme) => ({
-  stageContainer: {
-    flexGrow: 1,
-    top: 0,
-    margin: "0 176px",
+  root: {
+    backgroundColor: "#f5f5fb",
   },
-  gridTitle: {},
-  gridVideo: {},
-  gridProgressBar: {},
+  container: {
+    flexBasis: 0,
+    flexGrow: 1,
+    margin: theme.spacing(7),
+    backgroundColor: "#f5f5fb",
+  },
+  titleContainer: {
+    marginBottom: "60px",
+  },
+  card: {
+    borderRadius: "15px",
+    backgroundColor: "white",
+  },
+  cardMedia: {
+    borderRadius: "15px",
+  },
+  classContent: {
+    fontSize: "0.7em",
+  },
+  img: {
+    width: "100%"
+  }
 }));
 
 function StageFragment() {
   const classes = useStyles();
 
-  // TODO: update sections with Images/content
   return (
-    <Box className={classes.stageContainer}>
-      <Grid container spacing={3}>
-        <Grid item xs={4} className={classes.gridTitle}>
-          <Typography>PEGN Expo 2020</Typography>
-        </Grid>
-        <Grid item xs={8} className={classes.gridProgressBar}>
-          Progress bar here
-        </Grid>
+    <Grid container spacing={3} className={classes.container}>
+      <Grid container className={classes.titleContainer}>
+        <Typography variant="h5">PEGN Expo 2020</Typography>
+      </Grid>
+      <Grid container justify="center">
+          <img className={classes.img} src={speakerVideoImage} />
+      </Grid>
 
-        <Grid item xs={12} className={classes.gridVideo}>
-          Video here
+      <Grid container spacing={8}>
+        <Grid item xs={6}>
+          <Card>
+            <CardContent>
+              <Typography>Learn Figma</Typography>
+              <Box>
+                <img src='' />
+                <Typography variant="body1">UX Designer</Typography>
+                <Typography variant="body2">Stagea</Typography>
+              </Box>
+            </CardContent>
+          </Card>
         </Grid>
-
-        <Grid content spacing={5}>
-          <Grid item direction="column">
-            Figma PDF
-          </Grid>
-          <Grid item direction="column">
-            Figma Slides
-          </Grid>
-          <Grid item direction="column">
-            Invite me to chat
-          </Grid>
+        <Grid item xs={6}>
+          <Card>
+            <CardContent>
+              <Typography>Matthew Takenesse</Typography>
+              <Box>
+                <img src='' />
+                <Typography variant="body1">From NY</Typography>
+                <Typography variant="body2">takenessma.co</Typography>
+              </Box>
+            </CardContent>
+          </Card>
         </Grid>
       </Grid>
-    </Box>
+
+      <Grid container spacing={8}>
+        <Grid item xs={12}>
+          <Card>
+            <CardMedia></CardMedia>
+            <CardContent>
+              <Typography variant="body1">PDF/Figma kit</Typography>
+              <Typography variant="body2">450mb</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={8}>
+        <Grid item xs={12}>
+          <Card>
+            <CardMedia></CardMedia>
+            <CardContent>
+              <Typography variant="body1">Slides/Figma</Typography>
+              <Typography variant="body2">150mb</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={8}>
+        <Grid item xs={12}>
+          <Card>
+            <CardMedia></CardMedia>
+            <CardContent>
+              <Typography variant="body1">Invite me to chat</Typography>
+              <Typography variant="body2">matthew@stagea.com</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+
+    </Grid>
   );
 }
 
 export default function Stage() {
+  const classes = useStyles();
+
   return (
-    <Grid container>
+    <Grid container className={classes.root}>
       <Rooms />
       <StageFragment />
       <NetworkingDrawer />
