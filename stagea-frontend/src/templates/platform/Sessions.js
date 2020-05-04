@@ -35,21 +35,21 @@ const useStyles = makeStyles((theme) => ({
   },
   attendeesProgress: {
     display: "inline-block",
-    width: "150px",
+    width: "120px",
     height: "5px",
     borderRadius: "25px",
     backgroundColor: "#506CF0",
   },
   attendeesProgressDisabled: {
     display: "inline-block",
-    width: "150px",
+    width: "120px",
     height: "5px",
     borderRadius: "25px",
     backgroundColor: "#DBDBDB",
   },
   attendeesTime: {
     display: "inline-block",
-    marginLeft: "15px",
+    marginLeft: "10px",
     fontSize: "0.7em",
     color: "#979797"
   }
@@ -63,7 +63,7 @@ function SessionsFragment() {
       <Grid container className={classes.titleContainer}>
         <Typography variant="h5">PEGN Expo 2020</Typography>
       </Grid>
-      <Grid container spacing={3}>
+      <Grid container spacing={6}>
         <Grid item xs={4}>
           <Card className={classes.card}>
             <CardMedia
