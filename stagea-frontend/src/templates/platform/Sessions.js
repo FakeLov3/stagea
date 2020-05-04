@@ -15,10 +15,15 @@ import sessionsUXImage from "static/images/sessions/ux.png";
 import sessionsFirebaseImage from "static/images/sessions/firebase.jpg";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "#f5f5fb"
+  },
   container: {
     flexBasis: 0,
     flexGrow: 1,
     margin: theme.spacing(7),
+    backgroundColor: "#f5f5fb",
+    height: "100%"
   },
   titleContainer: {
     marginBottom: "60px",
@@ -150,8 +155,10 @@ function SessionsFragment() {
 }
 
 export default function Sessions() {
+  const classes = useStyles();
+
   return (
-    <Grid container>
+    <Grid container className={classes.root}>
       <Rooms />
       <SessionsFragment />
       <NetworkingDrawer />

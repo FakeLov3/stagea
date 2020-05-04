@@ -19,10 +19,14 @@ import yogaImage from "static/images/connect/yoga.png";
 import businessImage from 'static/images/connect/business.png'
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "#f5f5fb"
+  },
   container: {
     flexBasis: 0,
     flexGrow: 1,
     margin: theme.spacing(7),
+    backgroundColor: "#f5f5fb"
   },
   titleContainer: {
     marginBottom: "60px",
@@ -217,8 +221,10 @@ function ConnectFragment() {
 }
 
 export default function Connect() {
+  const classes = useStyles();
+
   return (
-    <Grid container>
+    <Grid container className={classes.root}>
       <Rooms />
       <ConnectFragment />
       <NetworkingDrawer />
