@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   tabPanel: {
     backgroundColor: "#F2F2F2",
     position: "relative",
-    height: "86%",
+    height: "92%",
   },
   tab__root: {
     "&:hover": {
@@ -81,8 +81,15 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     position: "absolute",
-    bottom: 0,
+    bottom: 5,
   },
+  formTextField: {
+    height: "100%",
+    width: "80%"
+  },
+  formButton: {
+    paddingLeft: "5px"
+  }
 }));
 
 function GeneralChat() {
@@ -153,8 +160,10 @@ function GeneralChat() {
           label="Type your message..."
           value={message}
           onChange={onTextChange}
+          size="small"
+          className={classes.formTextField}
         />
-        <IconButton aria-label="send" type="submit">
+        <IconButton className={classes.formButton} aria-label="send" type="submit">
           <SendIconSvg />
         </IconButton>
       </form>
