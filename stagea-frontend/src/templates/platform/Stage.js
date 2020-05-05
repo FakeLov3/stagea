@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px 0",
   },
   cardContentDetail: {
-    fontSize: "0.5em",
+    fontSize: "0.7em",
     color: "#4b4b69",
   },
   cardContentDetailTitle: {
