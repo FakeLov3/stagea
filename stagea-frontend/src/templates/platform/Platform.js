@@ -1,13 +1,12 @@
 import React from "react";
 import Rooms from "components/Rooms";
-import VMaps from "components/VirtualMap";
 import NetworkingDrawer from "components/NetworkingDrawer";
 
-export default function Platform() {    
+export default function Platform({ child }) {
   return (
     <div className="platform">
       <Rooms />
-      <VMaps />
+      {child}
       <NetworkingDrawer />
     </div>
   );

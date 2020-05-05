@@ -28,13 +28,13 @@ export default function Home() {
             in-person event with the advantages of the virtual.
           </p>
         </div>
-        <button className="b__blu__type">
+        <a className={classes.button} href="/platform">
+          <button className="b__blu__type">
           <span>
-            <a className={classes.button} href="/platform">
               Try for free
-            </a>
           </span>
         </button>
+        </a>
       </div>
     </div>
   );

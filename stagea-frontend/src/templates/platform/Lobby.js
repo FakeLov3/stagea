@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as Vmap } from "static/svgs/map.svg";
 import PeqGNC from "static/svgs/peqgnc.svg";
-import Schedule from "../components/schedule";
+import Schedule from "../../components/schedule";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function VMaps() {
+export default function Lobby() {
   const classes = useStyles();
 
   return (
