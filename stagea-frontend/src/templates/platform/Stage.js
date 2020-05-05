@@ -14,6 +14,7 @@ import NetworkingDrawer from "../../components/NetworkingDrawer";
 import { makeStyles } from "@material-ui/core/styles";
 import speakerVideoImage from "static/images/stage/speaker_video.png";
 import speakerThumb from "static/images/stage/speaker_thumbnail.png";
+import stageaLogo from "static/images/stage/stagea_logo.png";
 import figmaKitImage from "static/images/stage/figma_kit.png";
 import figmaSlideImage from 'static/images/stage/figma_slide.png'
 import inviteChatImage from 'static/images/stage/invite_chat.png'
@@ -112,7 +113,7 @@ function StageFragment() {
             <Box className={classes.cardContentTag} style={{ display: "flex" }}>
               <img
                 className={classes.imgThumb}
-                src={speakerThumb}
+                src={stageaLogo}
                 alt="speaker thumbnail"
               />
               <Box>
