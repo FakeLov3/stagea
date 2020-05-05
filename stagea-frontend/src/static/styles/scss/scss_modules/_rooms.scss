@@ -116,9 +116,10 @@
         width: 2vw;
       }
       &:nth-child(5),
-      &:nth-child(6),
+    //   &:nth-child(6),
       &:nth-child(7) {
         cursor: auto;
+        pointer-events: none;
         &:before {
           background-image: url("../../svgs/lock.svg");
           background-size: cover;
