@@ -10,12 +10,12 @@ import LobbyActive from "static/svgs/rooms/lobby_active.svg";
 import Stage from "static/svgs/rooms/stage.svg";
 import StageActive from "static/svgs/rooms/stage_active.svg";
 import Networking from "static/svgs/rooms/networking.svg";
-import NetworkingActive from 'static/svgs/rooms/networking_active.svg'
+import NetworkingActive from "static/svgs/rooms/networking_active.svg";
 import Marketing from "static/svgs/rooms/marketing.svg";
 import Play from "static/svgs/rooms/play.svg";
-import PlayActive from 'static/svgs/rooms/play_active.svg'
+import PlayActive from "static/svgs/rooms/play_active.svg";
 import Sponsors from "static/svgs/rooms/sponsors.svg";
-import SponsorsActive from 'static/svgs/rooms/sponsors_active.svg'
+import SponsorsActive from "static/svgs/rooms/sponsors_active.svg";
 import Support from "static/svgs/support.svg";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,12 +35,12 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     marginBottom: "3vh",
-    padding: "10%",
     position: "relative",
     width: "100%",
   },
   link: {
     textDecoration: "none",
+    padding: "10%",
     color: "inherit",
   },
   listActive: {
@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     marginBottom: "3vh",
-    padding: "10%",
     position: "relative",
     width: "100%",
     border: "1.5px solid #506cf0",
@@ -137,7 +136,6 @@ export default function Rooms() {
           to={`/platform/${path}`}
           className={classes.link}
           onClick={() => handleClick({ name })}
-          disabled
         >
           <img alt={`room-${name}`} src={imageSrc} />
           <span>
