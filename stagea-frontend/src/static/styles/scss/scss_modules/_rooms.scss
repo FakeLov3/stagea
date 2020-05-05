@@ -86,12 +86,6 @@
         margin-bottom: 10px;
         pointer-events: none;
       }
-      //&:nth-child(1) {
-      //  border: 1.5px solid #506cf0;
-      //  > span span:before {
-      //    background-image: url("../../svgs/user.svg");
-      //  }
-      //}
       &:nth-child(4):before {
         background: #ff384e;
         border-radius: 50%;
@@ -104,9 +98,9 @@
         width: 2vw;
       }
       &:nth-child(5),
-      &:nth-child(6),
       &:nth-child(7) {
         cursor: auto;
+        pointer-events: none;
         &:before {
           background-image: url("../../svgs/lock.svg");
           background-size: cover;

@@ -10,7 +10,7 @@ import LobbyActive from "static/svgs/rooms/lobby_active.svg";
 import Stage from "static/svgs/rooms/stage.svg";
 import StageActive from "static/svgs/rooms/stage_active.svg";
 import Networking from "static/svgs/rooms/networking.svg";
-import NetworkingActive from 'static/svgs/rooms/sponsors_active.svg'
+import NetworkingActive from 'static/svgs/rooms/networking_active.svg'
 import Marketing from "static/svgs/rooms/marketing.svg";
 import Play from "static/svgs/rooms/play.svg";
 import PlayActive from 'static/svgs/rooms/play_active.svg'
@@ -111,7 +111,6 @@ const roomsData = [
   },
 ];
 
-// TODO: change selected room based on current path
 export default function Rooms() {
   const classes = useStyles();
   const location = useLocation();
